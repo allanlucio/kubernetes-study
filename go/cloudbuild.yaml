@@ -14,7 +14,7 @@ steps:
   - 'version=1.24.0'
   - '-t'
   - 'gcr.io/$PROJECT_ID/golang-webserver:latest'
-  - '/go/.'
+  - 'go/.'
 
 - name: 'gcr.io/cloud-builders/go' #mostra a versão do Go
   args: ['version']
