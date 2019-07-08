@@ -17,4 +17,4 @@ steps:
   - 'go/.'
 
 images:
-- 'gcr.io/$PROJECT_ID/golang-webserver:latest' #
+- 'gcr.io/$PROJECT_ID/golang-webserver:latest' ##
