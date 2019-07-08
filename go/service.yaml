@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: gowebserver-service
 spec:
   type: LoadBalancer
   ports:
-    - port: 80
+    - port: 8000
   selector:
-    app: hello-nginx
+    app: gowebserver

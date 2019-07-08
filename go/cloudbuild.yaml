@@ -4,7 +4,7 @@
 steps:
 - id: go_test #testa a aplicação
   name: "gcr.io/cloud-builders/go"
-  args: ["test","soma"]
+  args: ["test","webserverg"]
   env: ["GOPATH=."]
 
 - name: 'gcr.io/cloud-builders/docker' #Gera uma imagem a partir do projeto
@@ -13,7 +13,7 @@ steps:
   - '--build-arg'
   - 'version=1.24.0'
   - '-t'
-  - 'gcr.io/$PROJECT_ID/golang-soma:latest'
+  - 'gcr.io/$PROJECT_ID/golang-webserver:latest'
   - '.'
 
 - name: 'gcr.io/cloud-builders/go' #mostra a versão do Go
@@ -23,8 +23,8 @@ steps:
 
 
 - name: 'gcr.io/cloud-builders/go' #Executa a soma.
-  args: ['run', 'soma']
+  args: ['run', 'webserver']
   env: ['GOPATH=.']
 
 images:
-- 'gcr.io/$PROJECT_ID/golang-soma:latest'
+- 'gcr.io/$PROJECT_ID/golang-webserver:latest' #

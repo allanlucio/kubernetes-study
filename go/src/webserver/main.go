@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"net/http"
 )
-func greeting(nome string) string {
+func Greeting(nome string) string {
 	return "<b>" +nome+ "</b>"
 }
 func main() {
 	http.HandleFunc("/", func (w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, greeting("Code.education Rocks!"))
+		fmt.Fprintf(w, Greeting("Code.education Rocks!"))
 	})
 
 	fs := http.FileServer(http.Dir("static/"))
