@@ -4,7 +4,7 @@
 steps:
 - id: go_test #testa a aplicação
   name: "gcr.io/cloud-builders/go"
-  args: ["test","webserverg"]
+  args: ["test","webserver"]
   env: ["GOPATH=."]
 
 - name: 'gcr.io/cloud-builders/docker' #Gera uma imagem a partir do projeto
