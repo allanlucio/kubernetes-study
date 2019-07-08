@@ -16,15 +16,5 @@ steps:
   - 'gcr.io/$PROJECT_ID/golang-webserver:latest'
   - 'go/.'
 
-- name: 'gcr.io/cloud-builders/go' #mostra a versão do Go
-  args: ['version']
-  env: ['GOPATH=go/.']
-
-
-
-- name: 'gcr.io/cloud-builders/go' #Executa a soma.
-  args: ['run', 'webserver']
-  env: ['GOPATH=go/.']
-
 images:
 - 'gcr.io/$PROJECT_ID/golang-webserver:latest' #
